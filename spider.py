@@ -59,7 +59,7 @@ def parse_page_detail(html,url):
         if data and 'sub_images' in data.keys():
             sub_images = data.get('sub_images')
             images = [item.get('url') for item in sub_images]
-            # for image in images:download_image(image)
+            for image in images:download_image(image)
             return {
                 'title':title,
                 'url':url,
